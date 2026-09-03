@@ -1,0 +1,121 @@
+@define-color c_purple #441188;
+@define-color c_mute_purple #2e2638;
+@define-color c_light_purple #8141de;
+@define-color c_gold #e3d095;
+@define-color c_orange #de8141;
+@define-color c_black #141216;
+
+* {
+  font-family: Maple Mono;
+  border-radius: 0;
+  font-size: 14px;
+  padding: 0px;
+  background: transparent;
+}
+
+window#waybar {
+  /* Linear gradients are used because it makes less harsh rounded border radius, gtk bug :p */
+  background-image: linear-gradient(to bottom, @c_black 100%);
+  border-radius: 8px;
+  padding: 0px;
+  border-style: none;
+}
+
+#battery,
+#network,
+#clock,
+#custom-applauncher,
+#tray,
+#workspaces,
+#pulseaudio {
+  background-image: linear-gradient(to bottom, @c_mute_purple 100%);
+  margin: 3px;
+  margin-right: 0px;
+  padding: 1px 8px;
+  border-radius: 6px;
+  color: @c_gold;
+  border-style: none;
+  transition-duration: 120ms;
+}
+
+#custom-applauncher{
+  font-size: 20px;
+}
+
+#clock {
+  margin-right: 6px;
+}
+
+#pulseaudio:hover {
+  background-image: linear-gradient(to bottom, @c_light_purple 100%);
+  color: @c_black;
+  transition-duration: 120ms;
+}
+
+#custom-applauncher:hover {
+  background-image: linear-gradient(to bottom, @c_light_purple 100%);
+  color: @c_black;
+  transition-duration: 120ms;
+}
+
+#tray menu {
+  background-color: @c_black;
+  color: @c_gold;
+  padding: 4px;
+}
+
+#tray menu menuitem {
+  background-image: linear-gradient(to bottom, @c_purple 100%);
+  margin: 3px;
+  color: @c_gold;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: @c_purple;
+}
+
+#tray menu menuitem:hover {
+  background-image: linear-gradient(to bottom, @c_light_purple 100%);
+  color: @c_light_purple;
+  font-weight: bold;
+}
+
+#workspaces button {
+  transition-duration: 100ms;
+  all: initial;
+  min-width: 0;
+  font-weight: bold;
+  color: @c_gold;
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+#workspaces button:hover {
+  transition-duration: 120ms;
+  color: @c_light_purple;
+}
+
+#workspaces button.focused {
+  color: @c_light_purple;
+  font-weight: bold;
+}
+
+#workspaces button.active {
+  color: @c_light_purple;
+  font-weight: bold;
+}
+
+#workspaces button.urgent {
+  color: @c_orange;
+}
+
+#battery {
+  background-color: @c_purple;
+  color: @c_gold;
+}
+
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+  color: @c_black;
+  background-color: @c_orange;
+}
