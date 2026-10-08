@@ -75,7 +75,7 @@ window#waybar {
 
 #tray menu menuitem:hover {
   background-image: linear-gradient(to bottom, @c_light_purple 100%);
-  color: @c_light_purple;
+  color: @c_black;
   font-weight: bold;
 }
 

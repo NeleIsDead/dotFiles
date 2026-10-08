@@ -1,0 +1,15 @@
+show=drun
+no_actions=true
+lines=8
+width=600
+location=center
+x=409
+y=200
+insensitive=false
+always_parse_args=true
+nshow_all=false
+term=kitty
+hide_scroll=true
+print_command=true
+insensitive=true
+prompt= HI!!! HELLO!!! WHATCHA GONNA LAUNCH TODAY????!?!?
