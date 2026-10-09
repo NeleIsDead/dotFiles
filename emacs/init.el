@@ -13,6 +13,13 @@
 
 (setq compilation-environment '("TERM=dumb" "COLORTERM=" "NO_COLOR=1"))
 
+
+; Source - https://stackoverflow.com/a/11270303
+; Posted by Cheeso, modified by community. See post 'Timeline' for change history
+; Retrieved 2026-10-09, License - CC BY-SA 3.0
+(setq ls-lisp-format-time-list  '("%d.%m.%Y %H:%M" "%d.%m.%Y %H:%M")
+      ls-lisp-use-localized-time-format t)
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
